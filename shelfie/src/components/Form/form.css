@@ -1,0 +1,32 @@
+#container {
+    background: #3AD886;
+    /* border: 1px solid darkred; */
+    height: 520px;
+    width: 450px;
+    /* display: flex */
+}
+.form-input{
+    height: 23px;
+    width: 400px;
+    margin: 10px 10px;
+}
+
+.image-input{
+    height: 200px;
+    width: 320px;
+    margin: 20px 30px;
+}
+.cancel-btn {
+    height: 42px;
+    width: 70px;
+    margin: 20px 30px;
+}
+.add-btn {
+    height: 42px;
+    width: 145px;
+    margin: 20px 30px;
+}
+
+/* cancel button  H42 W70 */
+
+/* add button  H42 W145 */
