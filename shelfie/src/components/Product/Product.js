@@ -1,13 +1,17 @@
 import React from 'react';
+import './product.css';
 
-
-const Products = () => {
-
+const Product = (props) => {
+    console.log(props)
     // Display name price image from props
     return (
 
-        <div>
-            test
+        <div className="container">
+            {props.name}
+            <br />
+            {props.price}
+            <br />
+            {props.image}
         </div>
 
     )
@@ -16,4 +20,4 @@ const Products = () => {
 
 
 
-export default Products;
+export default Product;

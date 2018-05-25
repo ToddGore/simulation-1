@@ -3,7 +3,7 @@
     /* border: 1px solid darkred; */
     height: 520px;
     width: 450px;
-    /* display: flex */
+    float: right;
 }
 .form-input{
     height: 23px;
@@ -27,6 +27,3 @@
     margin: 20px 30px;
 }
 
-/* cancel button  H42 W70 */
-
-/* add button  H42 W145 */

@@ -1,5 +1,7 @@
 import React from 'react';
 import Product from './../Product/Product';
+import './dashboard.css';
+
 
 class Dashboard extends React.Component {
     // state = {}
@@ -7,8 +9,19 @@ class Dashboard extends React.Component {
     render() {
         // console.log("test ", this.props.appState)
 
-        let mappedProducts = this.props.appState.map((items) => {
-            return items
+        let mappedProducts = this.props.appState.map((items, index) => {
+            return (
+                <div>
+                    <Product key={index}
+                        name={items.name}
+                        price={items.price}
+                        image={items.image}
+                    />
+
+                </div>
+            )
+
+
         })
         // Bring in inventory through props
         // map over inventory
@@ -16,8 +29,10 @@ class Dashboard extends React.Component {
 
 
         return (
-            <div>
-                mappedProducts
+            <div className="dash-container">
+                {/* <Product /> */}
+                Kello
+                {mappedProducts}
             </div>
         );
     }
