@@ -7,13 +7,9 @@ class Dashboard extends React.Component {
     render() {
         // console.log("test ", this.props.appState)
 
-        let mapped = this.props.appState.map((x, i) => {
-            return (
-                <Product key={i + x.name} event={x} editEvent={this.editEvent} />
-            )
+        let mappedProducts = this.props.appState.map((items) => {
+            return items
         })
-
-
         // Bring in inventory through props
         // map over inventory
 
@@ -21,7 +17,7 @@ class Dashboard extends React.Component {
 
         return (
             <div>
-                Dashboard
+                mappedProducts
             </div>
         );
     }
