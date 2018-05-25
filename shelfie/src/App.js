@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-
+import axios from 'axios'
 import './App.css';
 
 import Dashboard from './components/Dashboard/Dashboard';
@@ -15,13 +15,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [{ name: "Kitten1", price: 13, image: "https://www.flickr.com/photos/69302634@N02/15133405082" },
-      { name: "Kitten2", price: 18, image: "https://www.flickr.com/photos/69302634@N02/15133405082" },
-      { name: "Kitten3", price: 26, image: "https://www.flickr.com/photos/69302634@N02/15133405082" }]
+
+      products: []
+      // products: [{ name: "Kitten1", price: 13, image: "https://www.flickr.com/photos/69302634@N02/15133405082" },
+      // { name: "Kitten2", price: 18, image: "https://www.flickr.com/photos/69302634@N02/15133405082" },
+      // { name: "Kitten3", price: 26, image: "https://www.flickr.com/photos/69302634@N02/15133405082" }]
     }
 
   }
-
+  componentDidMount() {
+    axios.get('/api/inventory').then((res) => {
+      this.setState({
+        products: res.data
+      })
+    })
+  }
 
 
 

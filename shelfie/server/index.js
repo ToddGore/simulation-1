@@ -19,6 +19,6 @@ app.get('/api/inventory', ctrl.getAll);
 var dateWithoutSecond = new Date();
 dateWithoutSecond.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-const port = 3048;
+const port = 5678;
 app.listen(port, () => { console.log(`Server listening on port ${port} at ${dateWithoutSecond}`); });
 
