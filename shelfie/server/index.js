@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const nc = require('../server/controller');
+const ctrl = require('../server/controller');
 const massive = require('massive')
 
 require('dotenv').config()
@@ -10,10 +10,10 @@ app.use(bodyParser.json());
 
 massive(process.env.CONNECTION_STRING).then(db => app.set('db', db))
 
-app.get('/api/products', nc.read);
-app.post('/api/products', nc.create);
-app.put('/api/products/:id', nc.update);
-app.delete('/api/products/:id', nc.delete)
+app.get('/api/inventory', ctrl.getAll);
+// app.post('/api/inventory', ctrl.addProduct);
+// app.put('/api/inventory/:id', nc.update);
+// app.delete('/api/inventory/:id', ctrl.deleteProduct)
 
 
 var dateWithoutSecond = new Date();

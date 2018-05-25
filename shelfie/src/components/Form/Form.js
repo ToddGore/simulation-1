@@ -11,7 +11,7 @@ class Form extends React.Component {
             price: 0
         }
 
-
+        this.clearForm = this.clearForm.bind(this)
 
     }
 
