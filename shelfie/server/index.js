@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 massive(process.env.CONNECTION_STRING).then(db => app.set('db', db))
 
 app.get('/api/inventory', ctrl.getAll);
-// app.post('/api/inventory', ctrl.addProduct);
+app.post('/api/product', ctrl.addProduct);
 // app.put('/api/inventory/:id', nc.update);
 // app.delete('/api/inventory/:id', ctrl.deleteProduct)
 

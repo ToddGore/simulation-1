@@ -14,7 +14,7 @@ module.exports = {
     addProduct: (req, res) => {
         const db = req.app.get('db');
         const { name, price, image } = req.body
-        db.add_product([name, price, image])
+        db.create_product([name, price, image])
             .then(inventory => res.status(200).send(inventory))
             .catch(() => res.status(500).send())
     },
